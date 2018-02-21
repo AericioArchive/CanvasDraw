@@ -1,0 +1,14 @@
+#defButtonStyle {
+  background-color: #80D8FF;
+  border: none;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: bold;
+}
+#clrButton {
+  background-color: #F50057;
+  border: none;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: bold;
+}
