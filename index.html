@@ -1,49 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Lesson 4/5: Buttons n' Functions</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
-
-  
+    <meta charset="UTF-8">
+    <title>CanvasDraw</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body>
-
-  <body>
-<center>
-  <canvas id="canvas" width="400" height="400" style="border: 5px solid black"></canvas>
-  </br>
-  <input id="inputObjX" type="number" placeholder="X-Value" min="0" max="400">
-  <input id="inputObjY" type="number" placeholder="Y-Value" min="0" max="400">
-  <input id="inputObjH" type="number" placeholder="Height" min="1" max="400">
-  <input id="inputObjW" type="number" placeholder="Width" min="1" max="400">
-  <button id="defButtonStyle" type="button" onclick="drawObject()">Draw Object</button>
-  </br>
-  <input id="inputCObjX" type="number" placeholder="X-Value" min="0" max="400">
-  <input id="inputCObjY" type="number" placeholder="Y-Value" min="0" max="400">
-  <input id="inputCObjR" type="number" placeholder="Radius">
-  <input id="inputCObjSA" type="number" placeholder="Start Angle" min="0" max="360">
-  <input id="inputCObjSA" type="number" placeholder="End Angle" min="0" max="360">
-  <button id="defButtonStyle" type="button" onclick="drawCObject()">Draw Circular Object</button>
-  </br>
-<button id="clrButton" type="button" onclick="clearCanvas()">Clear Canvas</button>
-  </br>
-  <p id="functionOutput"></p>
-</center>
-</body>
-  
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
-</body>
-
+    <body>
+        <canvas id="canvas" width="600" height="600" style="border: 5px solid black"></canvas>
+        </br>
+        <input id="inputObjX" type="number" placeholder="X-Value" min="0" max="600">
+        <input id="inputObjY" type="number" placeholder="Y-Value" min="0" max="600">
+        <input id="inputObjH" type="number" placeholder="Height" min="1" max="600">
+        <input id="inputObjW" type="number" placeholder="Width" min="1" max="600">
+        <button type="button" onclick="drawObject()">Draw Object</button>
+        </br>
+        <input id="inputCObjX" type="number" placeholder="X-Value" min="0" max="600">
+        <input id="inputCObjY" type="number" placeholder="Y-Value" min="0" max="600">
+        <input id="inputCObjR" type="number" placeholder="Radius" min="1" max="600">
+        <input id="inputCObjSA" type="number" placeholder="Start Angle" min="1" max="360">
+        <input id="inputCObjEA" type="number" placeholder="End Angle" min="1" max="360">
+        <input id="inputCObjCC" type="checkbox">
+        <button type="button" onclick="drawCircleObject()">Draw Circular Object</button>
+        </br>
+        <button id="clrButton" type="button" onclick="clearCanvas()">Clear Canvas</button>
+        <p id="functionOutput"></p>
+        <script src="js/index.js"></script>
+    </body>
 </html>
