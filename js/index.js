@@ -45,3 +45,21 @@ function clearCanvas() {
     }
     document.getElementById('functionOutput').innerHTML = print;
 }
+
+// Canvas Key Input
+
+document.addEventListener("keydown", keyStrokeListener);
+
+function keyStrokeListener(e) {
+    if (e.keyCode === 67) {
+        clearCanvas();
+    }
+    if (e.keyCode === 68) {
+        if (drawObject !== undefined) {
+            drawObject();
+        }
+        if (drawCircleObject !== undefined) {
+            drawCircleObject();
+        }
+    }
+}
