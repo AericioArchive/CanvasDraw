@@ -26,9 +26,35 @@ function drawCircleObject() {
         ctx.beginPath();
         ctx.arc(getCObjX, getCObjY, getCObjR, getCObjSA, getCObjEA, getCObjCC);
         ctx.stroke();
-    } else {
+    }
+    else {
         ctx.beginPath();
         ctx.arc(getCObjX, getCObjY, getCObjR, getCObjSA, getCObjEA);
+        ctx.stroke();
+    }
+}
+
+function drawLineObject() {
+    var getLObjX = document.getElementById('inputLObjX').value;
+    var getLObjY = document.getElementById('inputLObjY').value;
+    var getLObjM1X = document.getElementById('inputLObjM1X').value;
+    var getLObjM1Y = document.getElementById('inputLObjM1Y').value;
+    var getLObjM2X = document.getElementById('inputLObjM2X').value;
+    var getLObjM2Y = document.getElementById('inputLObjM2Y').value;
+    var checkLObjM = [
+        getLObjM1X,
+        getLObjM1Y,
+        getLObjM2X,
+        getLObjM2Y
+    ];
+    if (checkLObjM !== null) {
+        ctx.lineTo(getLObjX, getLObjY);
+        ctx.moveTo(getLObjM1X, getLObjM1Y);
+        ctx.moveTo(getLObjM2X, getLObjM2Y);
+        ctx.stroke();
+    }
+    else {
+        ctx.lineTo(getLObjX, getLObjY);
         ctx.stroke();
     }
 }
@@ -40,7 +66,8 @@ function clearCanvas() {
     if (confirm('Are you sure you want to clear your canvas?')) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         print = 'Canvas cleared by user.';
-    } else {
+    }
+    else {
         print = 'Canvas clear canceled by user.';
     }
     document.getElementById('functionOutput').innerHTML = print;
