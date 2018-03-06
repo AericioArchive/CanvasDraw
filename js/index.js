@@ -14,7 +14,6 @@ function drawObject() {
 }
 
 // Circle-Object
-
 function drawCircleObject() {
     var getCObjX = document.getElementById('inputCObjX').value;
     var getCObjY = document.getElementById('inputCObjY').value;
@@ -87,6 +86,9 @@ function keyStrokeListener(e) {
         }
         if (drawCircleObject !== undefined) {
             drawCircleObject();
+        }
+        if (drawLineObject !== undefined) {
+            drawLineObject();
         }
     }
 }
